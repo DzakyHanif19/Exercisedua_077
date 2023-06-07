@@ -18,25 +18,25 @@ public:
 		return x;
 	}
 };
-class Lingkaran : public bidangdatar {
+class lingkaran : public bidangdatar {
 public:
     void input() {
-        cout << "Masukkan jejari: ";
+        cout << "masukkan jejari: ";
         int r;
         cin >> r;
         setX(r);
     }
 
-    float Luas(int r) {
+    float luas(int r) {
         return 3.14 * r * r;
     }
 
-    float Keliling(int r) {
+    float keliling(int r) {
         return 2 * 3.14 * r;
     }
 };
 
-class Bujursangkar : public bidangdatar {
+class bujursangkar : public bidangdatar {
 public:
     void input() {
         cout << "Masukkan sisi: ";
@@ -57,19 +57,19 @@ public:
 int main() {
     bidangdatar* bd;
 
-    cout << "Lingkaran dibuat" << endl;
-    bd = new Lingkaran();
+    cout << "lingkaran dibuat" << endl;
+    bd = new lingkaran();
     bd->input();
     int r = bd->getX();
-    cout << "Luas Lingkaran = " << bd->luas(r) << endl;
-    cout << "Keliling Lingkaran = " << bd->keliling(r) << endl;
+    cout << "luas lingkaran = " << bd->luas(r) << endl;
+    cout << "keliling lingkaran = " << bd->keliling(r) << endl;
 
-    cout << "Bujursangkar dibuat" << endl;
-    bd = new Bujursangkar();
+    cout << "bujursangkar dibuat" << endl;
+    bd = new bujursangkar();
     bd->input();
     int s = bd->getX();
-    cout << "Luas Bujursangkar = " << bd->luas(s) << endl;
-    cout << "Keliling Bujursangkar = " << bd->keliling(s) << endl;
+    cout << "luas bujursangkar = " << bd->luas(s) << endl;
+    cout << "keliling bujursangkar = " << bd->keliling(s) << endl;
 
     delete bd;
     return 0;
